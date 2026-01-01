@@ -3,32 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aliva - Intelligent Healthcare Platform</title>
+    <title>Aliva - AI-Powered Clinical Intelligence</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Animated Background -->
+    <div class="bg-gradient"></div>
+    <div class="bg-grid"></div>
+    
+    <!-- Floating Elements -->
+    <div class="floating-shapes">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+    </div>
+
     <!-- Navigation -->
-    <nav class="navbar">
+    <nav class="navbar" id="navbar">
         <div class="container">
             <div class="nav-content">
                 <div class="logo">
-                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
-                        <circle cx="16" cy="16" r="14" stroke="url(#gradient)" stroke-width="2"/>
-                        <path d="M16 8L20 16L16 24L12 16L16 8Z" fill="url(#gradient)"/>
-                        <defs>
-                            <linearGradient id="gradient" x1="0" y1="0" x2="32" y2="32">
-                                <stop offset="0%" stop-color="#3B82F6"/>
-                                <stop offset="100%" stop-color="#1D4ED8"/>
-                            </linearGradient>
-                        </defs>
-                    </svg>
+                    <div class="logo-icon">
+                        <div class="logo-dot"></div>
+                        <div class="logo-ring"></div>
+                    </div>
                     <span>Aliva</span>
                 </div>
                 <div class="nav-links">
-                    <a href="#features">Features</a>
-                    <a href="#technology">Technology</a>
-                    <a href="#about">About</a>
-                    <a href="#contact" class="btn-primary">Get Started</a>
+                    <a href="#features" class="nav-link">Features</a>
+                    <a href="#demo" class="nav-link">Demo</a>
+                    <a href="pricing.html" class="nav-link">Pricing</a>
+                    <a href="demo.html" class="btn-primary">Get Started</a>
                 </div>
             </div>
         </div>
@@ -38,242 +46,331 @@
     <section class="hero">
         <div class="container">
             <div class="hero-content">
-                <div class="hero-text">
-                    <div class="badge">AI-Powered Healthcare Intelligence</div>
-                    <h1 class="gradient-text">Clinical Decision Support, Reimagined</h1>
-                    <p class="hero-description">
-                        Aliva transforms patient data into actionable clinical insights. Our AI-powered platform 
-                        aggregates, normalizes, and analyzes healthcare information to empower better patient outcomes.
-                    </p>
-                    <div class="hero-buttons">
-                        <button class="btn-primary btn-large">
-                            Request Demo
-                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                                <path d="M4 10H16M16 10L11 5M16 10L11 15" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                            </svg>
-                        </button>
-                        <button class="btn-secondary btn-large">
-                            <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
-                                <path d="M6.3 2.84A10 10 0 0 1 20 10c0 5.52-4.48 10-10 10S0 15.52 0 10a10 10 0 0 1 6.3-9.16v2.3A7.5 7.5 0 1 0 17.5 10c0-3.86-2.92-7.04-6.66-7.45v2.37l-4.54-3.04z"/>
-                            </svg>
-                            Watch Video
-                        </button>
-                    </div>
-                    <div class="stats">
-                        <div class="stat">
-                            <div class="stat-number">99.9%</div>
-                            <div class="stat-label">Accuracy</div>
-                        </div>
-                        <div class="stat">
-                            <div class="stat-number">50%</div>
-                            <div class="stat-label">Time Saved</div>
-                        </div>
-                        <div class="stat">
-                            <div class="stat-number">HIPAA</div>
-                            <div class="stat-label">Compliant</div>
-                        </div>
+                <div class="hero-badge">
+                    <span class="badge-pulse"></span>
+                    Powered by Advanced AI
+                </div>
+                <h1 class="hero-title">
+                    Transform the future of healthcare, <br>one prompt at a time.
+                </h1>
+                <p class="hero-description">
+                    Quanitfy and summarize confusing patient data into actionable insights. Aliva's AI analyzes millions of data points in seconds, empowering clinicians to make better decisions faster.
+                </p>
+                <div class="hero-cta">
+                    <a href="demo.html" class="btn-hero">
+                        Request Demo
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path d="M4 10H16M16 10L11 5M16 10L11 15" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </a>
+                    <a href="#demo" class="btn-secondary">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                            <circle cx="10" cy="10" r="8"/>
+                            <path d="M8 7L13 10L8 13V7Z" fill="white"/>
+                        </svg>
+                        Watch Demo
+                    </a>
+                </div>
+                
+                <!-- Trusted By -->
+                <div class="trusted-by">
+                    <span class="trusted-label">Trusted by leading hospitals</span>
+                    <div class="hospital-logos">
+                        <div class="hospital-logo">Hopkins</div>
+                        <div class="hospital-logo">Stanford</div>
+                        <div class="hospital-logo">Mayo Clinic</div>
                     </div>
                 </div>
-                <div class="hero-visual">
-                    <div class="floating-card card-1">
-                        <div class="card-header">
-                            <div class="pulse-dot"></div>
-                            <span>Patient Timeline</span>
-                        </div>
-                        <div class="card-content">
-                            <div class="timeline-item">
-                                <div class="timeline-dot"></div>
-                                <div class="timeline-text">Vitals updated</div>
-                            </div>
-                            <div class="timeline-item">
-                                <div class="timeline-dot"></div>
-                                <div class="timeline-text">Lab results pending</div>
-                            </div>
-                            <div class="timeline-item">
-                                <div class="timeline-dot"></div>
-                                <div class="timeline-text">Medication administered</div>
+            </div>
+        </div>
+        
+        <!-- Scroll Indicator -->
+        <div class="scroll-indicator">
+            <div class="scroll-mouse">
+                <div class="scroll-wheel"></div>
+            </div>
+            <span>Scroll to explore</span>
+        </div>
+    </section>
+
+    <!-- Interactive Stats -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number" data-target="99.9">0</div>
+                    <div class="stat-unit">%</div>
+                    <div class="stat-label">Accuracy Rate</div>
+                    <div class="stat-bar">
+                        <div class="stat-fill"></div>
+                    </div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-target="50">0</div>
+                    <div class="stat-unit">%</div>
+                    <div class="stat-label">Faster Decisions</div>
+                    <div class="stat-bar">
+                        <div class="stat-fill"></div>
+                    </div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-target="24">0</div>
+                    <div class="stat-unit">/7</div>
+                    <div class="stat-label">Always Available</div>
+                    <div class="stat-bar">
+                        <div class="stat-fill"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Product Demo -->
+    <section id="demo" class="demo-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Interactive Demo</span>
+                <h2 class="section-title">See Aliva in Action</h2>
+                <p class="section-description">Experience real-time AI analysis. Click around and explore the interface.</p>
+            </div>
+
+            <div class="demo-wrapper">
+                <!-- Demo Controls -->
+                <div class="demo-controls">
+                    <button class="demo-tab active" data-demo="chat">
+                        <svg width="18" height="18" viewBox="0 0 18 18" fill="currentColor">
+                            <circle cx="9" cy="9" r="7"/>
+                        </svg>
+                        AI Chat
+                    </button>
+                    <button class="demo-tab" data-demo="timeline">
+                        <svg width="18" height="18" viewBox="0 0 18 18" fill="currentColor">
+                            <rect x="2" y="2" width="14" height="14" rx="2"/>
+                        </svg>
+                        Timeline
+                    </button>
+                    <button class="demo-tab" data-demo="labs">
+                        <svg width="18" height="18" viewBox="0 0 18 18" fill="currentColor">
+                            <path d="M5 3h8v5l-4 7-4-7V3z"/>
+                        </svg>
+                        Lab Results
+                    </button>
+                </div>
+
+                <!-- Demo Container -->
+                <div class="demo-container">
+                    <!-- Chat Demo -->
+                    <div class="demo-panel active" id="chatDemo">
+                        <div class="demo-screen">
+                            <div class="demo-chat">
+                                <div class="chat-header">
+                                    <div class="chat-user">
+                                        <div class="user-avatar">JD</div>
+                                        <div class="user-info">
+                                            <div class="user-name">John Doe</div>
+                                            <div class="user-id">ID: 847392</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="chat-messages" id="demoMessages">
+                                    <div class="message ai">
+                                        <div class="message-avatar">
+                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="white">
+                                                <circle cx="8" cy="8" r="6"/>
+                                            </svg>
+                                        </div>
+                                        <div class="message-content">
+                                            Hello! I'm analyzing John's patient data. What would you like to know?
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="chat-suggestions">
+                                    <button class="suggestion-chip">Show latest vitals</button>
+                                    <button class="suggestion-chip">Lab results</button>
+                                    <button class="suggestion-chip">Medication history</button>
+                                    <button class="suggestion-chip">Drug interactions</button>
+                                </div>
+                                
+                                <div class="chat-input-box">
+                                    <input type="text" placeholder="Ask about patient data..." id="demoInput">
+                                    <button class="send-btn">
+                                        <svg width="18" height="18" viewBox="0 0 18 18" fill="currentColor">
+                                            <path d="M2 9l14-7-7 14-2-7-7-2z"/>
+                                        </svg>
+                                    </button>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="floating-card card-2">
-                        <div class="card-header">
-                            <div class="pulse-dot pulse-warning"></div>
-                            <span>AI Analysis</span>
-                        </div>
-                        <div class="card-content">
-                            <div class="analysis-bar">
-                                <div class="analysis-fill" style="width: 85%"></div>
+
+                    <!-- Timeline Demo -->
+                    <div class="demo-panel" id="timelineDemo">
+                        <div class="demo-screen">
+                            <div class="timeline-view">
+                                <div class="timeline-item" style="animation-delay: 0.1s">
+                                    <div class="timeline-dot vitals"></div>
+                                    <div class="timeline-info">
+                                        <div class="timeline-time">2 min ago</div>
+                                        <div class="timeline-title">Vitals Updated</div>
+                                        <div class="timeline-detail">BP: 120/80, HR: 72 bpm</div>
+                                    </div>
+                                </div>
+                                <div class="timeline-item" style="animation-delay: 0.2s">
+                                    <div class="timeline-dot labs"></div>
+                                    <div class="timeline-info">
+                                        <div class="timeline-time">15 min ago</div>
+                                        <div class="timeline-title">Lab Results</div>
+                                        <div class="timeline-detail">CBC - All normal</div>
+                                    </div>
+                                </div>
+                                <div class="timeline-item" style="animation-delay: 0.3s">
+                                    <div class="timeline-dot meds"></div>
+                                    <div class="timeline-info">
+                                        <div class="timeline-time">1 hour ago</div>
+                                        <div class="timeline-title">Medication Given</div>
+                                        <div class="timeline-detail">Metformin 500mg</div>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="analysis-text">Processing clinical data...</div>
                         </div>
                     </div>
-                    <div class="floating-card card-3">
-                        <div class="card-header">
-                            <div class="pulse-dot pulse-success"></div>
-                            <span>Conflict Detection</span>
-                        </div>
-                        <div class="card-content">
-                            <div class="alert-item">⚠️ Drug-allergy interaction detected</div>
+
+                    <!-- Labs Demo -->
+                    <div class="demo-panel" id="labsDemo">
+                        <div class="demo-screen">
+                            <div class="labs-view">
+                                <div class="lab-card" style="animation-delay: 0.1s">
+                                    <div class="lab-header">
+                                        <h4>Complete Blood Count</h4>
+                                        <span class="lab-badge normal">Normal</span>
+                                    </div>
+                                    <div class="lab-values">
+                                        <div class="lab-row">
+                                            <span>WBC</span>
+                                            <span class="lab-value">7.2 K/µL</span>
+                                            <span class="lab-status normal">●</span>
+                                        </div>
+                                        <div class="lab-row">
+                                            <span>Hemoglobin</span>
+                                            <span class="lab-value">14.1 g/dL</span>
+                                            <span class="lab-status normal">●</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="lab-card" style="animation-delay: 0.2s">
+                                    <div class="lab-header">
+                                        <h4>Metabolic Panel</h4>
+                                        <span class="lab-badge normal">Normal</span>
+                                    </div>
+                                    <div class="lab-values">
+                                        <div class="lab-row">
+                                            <span>Glucose</span>
+                                            <span class="lab-value">102 mg/dL</span>
+                                            <span class="lab-status warning">●</span>
+                                        </div>
+                                        <div class="lab-row">
+                                            <span>Sodium</span>
+                                            <span class="lab-value">140 mEq/L</span>
+                                            <span class="lab-status normal">●</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="gradient-orb orb-1"></div>
-                    <div class="gradient-orb orb-2"></div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Features Section -->
-    <section id="features" class="features">
+    <section id="features" class="features-section">
         <div class="container">
             <div class="section-header">
-                <h2>Powerful Features for Modern Healthcare</h2>
-                <p>Everything you need to deliver exceptional patient care</p>
+                <span class="section-label">Core Features</span>
+                <h2 class="section-title">Built for Modern Healthcare</h2>
             </div>
+
             <div class="features-grid">
                 <div class="feature-card">
                     <div class="feature-icon">
-                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
-                            <rect x="4" y="4" width="24" height="24" rx="4" stroke="currentColor" stroke-width="2"/>
-                            <path d="M12 16L15 19L20 13" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" stroke-width="2"/>
+                            <path d="M2 17L12 22L22 17" stroke="currentColor" stroke-width="2"/>
                         </svg>
                     </div>
                     <h3>FHIR Integration</h3>
-                    <p>Seamlessly connect with any FHIR-compliant EHR system. Access and normalize patient data in real-time.</p>
+                    <p>Seamless connection with any EHR system</p>
                 </div>
+
                 <div class="feature-card">
                     <div class="feature-icon">
-                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
-                            <circle cx="16" cy="16" r="6" stroke="currentColor" stroke-width="2"/>
-                            <path d="M16 4V8M16 24V28M28 16H24M8 16H4M24.5 7.5L21.5 10.5M10.5 21.5L7.5 24.5M24.5 24.5L21.5 21.5M10.5 10.5L7.5 7.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="2"/>
+                            <path d="M12 1V4M12 20V23M23 12H20M4 12H1" stroke="currentColor" stroke-width="2"/>
                         </svg>
                     </div>
-                    <h3>AI-Powered Insights</h3>
-                    <p>Advanced machine learning models analyze patient data to surface critical clinical patterns and recommendations.</p>
+                    <h3>AI Analysis</h3>
+                    <p>Real-time insights from patient data</p>
                 </div>
+
                 <div class="feature-card">
                     <div class="feature-icon">
-                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
-                            <path d="M16 4L4 10L16 16L28 10L16 4Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
-                            <path d="M4 16L16 22L28 16" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
-                            <path d="M4 22L16 28L28 22" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M14 2H6C4.89543 2 4 2.89543 4 4V20C4 21.1046 4.89543 22 6 22H18C19.1046 22 20 21.1046 20 20V8L14 2Z" stroke="currentColor" stroke-width="2"/>
+                            <path d="M14 2V8H20" stroke="currentColor" stroke-width="2"/>
+                            <path d="M8 12H16M8 16H16M8 8H10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
                         </svg>
                     </div>
-                    <h3>Medical Coding</h3>
-                    <p>Automatic normalization using RxNorm, LOINC, and SNOMED-CT standards for consistent data representation.</p>
+                    <h3>In-context summarization</h3>
+                    <p>A thorough patient summary, at your fingertips</p>
                 </div>
+
                 <div class="feature-card">
                     <div class="feature-icon">
-                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
-                            <path d="M16 28C22.6274 28 28 22.6274 28 16C28 9.37258 22.6274 4 16 4C9.37258 4 4 9.37258 4 16C4 22.6274 9.37258 28 16 28Z" stroke="currentColor" stroke-width="2"/>
-                            <path d="M16 12V16L19 19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                        </svg>
-                    </div>
-                    <h3>Real-Time Alerts</h3>
-                    <p>Instant notifications for drug-allergy interactions, contraindications, and critical lab values.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
-                            <rect x="6" y="6" width="20" height="20" rx="2" stroke="currentColor" stroke-width="2"/>
-                            <path d="M12 6V4M20 6V4M6 12H26" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <rect x="3" y="3" width="18" height="18" rx="2" stroke="currentColor" stroke-width="2"/>
+                            <path d="M9 3V21M15 3V21M3 9H21M3 15H21" stroke="currentColor" stroke-width="2"/>
                         </svg>
                     </div>
                     <h3>Patient Timeline</h3>
-                    <p>Comprehensive chronological view of patient history, medications, procedures, and outcomes.</p>
+                    <p>Complete medical history at a glance</p>
                 </div>
+
                 <div class="feature-card">
                     <div class="feature-icon">
-                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
-                            <path d="M16 4V16L22 22" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                            <circle cx="16" cy="16" r="12" stroke="currentColor" stroke-width="2"/>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M21 16V8C21 6.89543 20.1046 6 19 6H5C3.89543 6 3 6.89543 3 8V16C3 17.1046 3.89543 18 5 18H19C20.1046 18 21 17.1046 21 16Z" stroke="currentColor" stroke-width="2"/>
                         </svg>
                     </div>
-                    <h3>Clinical Summaries</h3>
-                    <p>AI-generated summaries that distill complex patient data into actionable clinical narratives.</p>
+                    <h3>HIPAA Compliant</h3>
+                    <p>Enterprise-grade security built-in</p>
                 </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Technology Section -->
-    <section id="technology" class="technology">
-        <div class="container">
-            <div class="tech-content">
-                <div class="tech-visual">
-                    <div class="code-window">
-                        <div class="code-header">
-                            <div class="code-dots">
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                            </div>
-                            <span class="code-title">aliva-engine.ts</span>
-                        </div>
-                        <div class="code-content">
-                            <pre><code><span class="code-keyword">import</span> { FHIRClient } <span class="code-keyword">from</span> <span class="code-string">'@aliva/fhir'</span>;
-<span class="code-keyword">import</span> { AIEngine } <span class="code-keyword">from</span> <span class="code-string">'@aliva/intelligence'</span>;
-
-<span class="code-keyword">const</span> patient = <span class="code-keyword">await</span> <span class="code-function">FHIRClient</span>.<span class="code-function">getPatient</span>(id);
-<span class="code-keyword">const</span> insights = <span class="code-keyword">await</span> <span class="code-function">AIEngine</span>.<span class="code-function">analyze</span>({
-  data: patient.timeline,
-  context: <span class="code-string">'emergency_department'</span>,
-  normalize: <span class="code-keyword">true</span>
-});
-
-<span class="code-comment">// Real-time conflict detection</span>
-<span class="code-keyword">const</span> conflicts = <span class="code-keyword">await</span> insights.<span class="code-function">detectConflicts</span>();
-<span class="code-keyword">if</span> (conflicts.critical) {
-  <span class="code-function">alert</span>.<span class="code-function">notify</span>(provider, conflicts);
-}</code></pre>
-                        </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M13 2L3 14H12L11 22L21 10H12L13 2Z" stroke="currentColor" stroke-width="2"/>
+                        </svg>
                     </div>
-                </div>
-                <div class="tech-text">
-                    <div class="badge">Advanced Technology</div>
-                    <h2>Built on Cutting-Edge AI</h2>
-                    <p>
-                        Aliva leverages state-of-the-art language models and healthcare standards to deliver 
-                        unprecedented clinical intelligence. Our platform processes millions of data points in 
-                        real-time, providing clinicians with the insights they need exactly when they need them.
-                    </p>
-                    <div class="tech-features">
-                        <div class="tech-feature">
-                            <div class="tech-feature-icon">✓</div>
-                            <div>
-                                <h4>HIPAA Compliant Infrastructure</h4>
-                                <p>Enterprise-grade security with end-to-end encryption</p>
-                            </div>
-                        </div>
-                        <div class="tech-feature">
-                            <div class="tech-feature-icon">✓</div>
-                            <div>
-                                <h4>Scalable Architecture</h4>
-                                <p>Handle millions of patient records with sub-second response times</p>
-                            </div>
-                        </div>
-                        <div class="tech-feature">
-                            <div class="tech-feature-icon">✓</div>
-                            <div>
-                                <h4>Continuous Learning</h4>
-                                <p>Models that improve with every interaction and data point</p>
-                            </div>
-                        </div>
-                    </div>
+                    <h3>Lightning Fast</h3>
+                    <p>Sub-second response times</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- CTA Section -->
-    <section class="cta">
+    <section class="cta-section">
         <div class="container">
             <div class="cta-content">
-                <h2>Ready to Transform Your Clinical Workflow?</h2>
-                <p>Join leading healthcare providers using Aliva to deliver better patient outcomes</p>
+                <h2>Ready to Transform Patient Care?</h2>
+                <p>Join hundreds of hospitals using Aliva to save lives every day</p>
                 <div class="cta-buttons">
-                    <button class="btn-primary btn-large">Schedule a Demo</button>
-                    <button class="btn-secondary btn-large">Contact Sales</button>
+                    <a href="demo.html" class="btn-cta">Get Started Free</a>
+                    <a href="#" class="btn-outline">Talk to Sales</a>
                 </div>
             </div>
         </div>
@@ -285,34 +382,28 @@
             <div class="footer-content">
                 <div class="footer-brand">
                     <div class="logo">
-                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
-                            <circle cx="16" cy="16" r="14" stroke="url(#gradient2)" stroke-width="2"/>
-                            <path d="M16 8L20 16L16 24L12 16L16 8Z" fill="url(#gradient2)"/>
-                            <defs>
-                                <linearGradient id="gradient2" x1="0" y1="0" x2="32" y2="32">
-                                    <stop offset="0%" stop-color="#3B82F6"/>
-                                    <stop offset="100%" stop-color="#1D4ED8"/>
-                                </linearGradient>
-                            </defs>
-                        </svg>
+                        <div class="logo-icon">
+                            <div class="logo-dot"></div>
+                            <div class="logo-ring"></div>
+                        </div>
                         <span>Aliva</span>
                     </div>
-                    <p>Intelligent healthcare platform powered by AI</p>
+                    <p>AI-powered clinical intelligence for modern healthcare</p>
                 </div>
                 <div class="footer-links">
-                    <div class="footer-column">
+                    <div class="footer-col">
                         <h4>Product</h4>
                         <a href="#features">Features</a>
-                        <a href="#technology">Technology</a>
-                        <a href="#pricing">Pricing</a>
+                        <a href="pricing.html">Pricing</a>
+                        <a href="#demo">Demo</a>
                     </div>
-                    <div class="footer-column">
+                    <div class="footer-col">
                         <h4>Company</h4>
                         <a href="#about">About</a>
                         <a href="#careers">Careers</a>
                         <a href="#contact">Contact</a>
                     </div>
-                    <div class="footer-column">
+                    <div class="footer-col">
                         <h4>Resources</h4>
                         <a href="#docs">Documentation</a>
                         <a href="#blog">Blog</a>
@@ -323,8 +414,9 @@
             <div class="footer-bottom">
                 <p>&copy; 2024 Aliva Health. All rights reserved.</p>
                 <div class="footer-legal">
-                    <a href="#privacy">Privacy Policy</a>
-                    <a href="#terms">Terms of Service</a>
+                    <a href="#privacy">Privacy</a>
+                    <a href="#terms">Terms</a>
+                    <a href="#security">Security</a>
                 </div>
             </div>
         </div>

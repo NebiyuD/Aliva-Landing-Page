@@ -1,6 +1,162 @@
-// Smooth scroll for navigation links
+// Modern Interactive Landing Page
+
+// Navbar scroll effect
+window.addEventListener('scroll', () => {
+    const navbar = document.getElementById('navbar');
+    if (window.pageYOffset > 50) {
+        navbar.classList.add('scrolled');
+    } else {
+        navbar.classList.remove('scrolled');
+    }
+});
+
+// Animated counter
+function animateCounter(element) {
+    const target = parseFloat(element.dataset.target);
+    const duration = 2000;
+    const step = target / (duration / 16);
+    let current = 0;
+    
+    const timer = setInterval(() => {
+        current += step;
+        if (current >= target) {
+            element.textContent = target;
+            clearInterval(timer);
+        } else {
+            element.textContent = Math.floor(current * 10) / 10;
+        }
+    }, 16);
+}
+
+// Intersection Observer for animations
+const observerOptions = {
+    threshold: 0.3,
+    rootMargin: '0px'
+};
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            // Animate stats
+            if (entry.target.classList.contains('stat-item')) {
+                const number = entry.target.querySelector('.stat-number');
+                animateCounter(number);
+                entry.target.classList.add('animated');
+            }
+            
+            observer.unobserve(entry.target);
+        }
+    });
+}, observerOptions);
+
+// Observe elements
+document.addEventListener('DOMContentLoaded', () => {
+    // Observe stats
+    document.querySelectorAll('.stat-item').forEach(stat => {
+        observer.observe(stat);
+    });
+    
+    // Demo tabs
+    const demoTabs = document.querySelectorAll('.demo-tab');
+    const demoPanels = document.querySelectorAll('.demo-panel');
+    
+    demoTabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+            const demoType = tab.dataset.demo;
+            
+            // Update tabs
+            demoTabs.forEach(t => t.classList.remove('active'));
+            tab.classList.add('active');
+            
+            // Update panels
+            demoPanels.forEach(p => p.classList.remove('active'));
+            document.getElementById(`${demoType}Demo`).classList.add('active');
+        });
+    });
+    
+    // Chat suggestions
+    const suggestions = document.querySelectorAll('.suggestion-chip');
+    const demoInput = document.getElementById('demoInput');
+    const demoMessages = document.getElementById('demoMessages');
+    
+    suggestions.forEach(chip => {
+        chip.addEventListener('click', () => {
+            const question = chip.textContent;
+            
+            // Add user message
+            addMessage('user', question);
+            
+            // Simulate AI response
+            setTimeout(() => {
+                const response = getAIResponse(question);
+                addMessage('ai', response);
+            }, 1000);
+        });
+    });
+    
+    // Send button
+    document.querySelector('.send-btn').addEventListener('click', sendMessage);
+    demoInput.addEventListener('keypress', (e) => {
+        if (e.key === 'Enter') {
+            sendMessage();
+        }
+    });
+    
+    function sendMessage() {
+        const message = demoInput.value.trim();
+        if (!message) return;
+        
+        addMessage('user', message);
+        demoInput.value = '';
+        
+        setTimeout(() => {
+            const response = getAIResponse(message);
+            addMessage('ai', response);
+        }, 1000);
+    }
+    
+    function addMessage(type, text) {
+        const messageDiv = document.createElement('div');
+        messageDiv.className = `message ${type}`;
+        
+        const avatar = document.createElement('div');
+        avatar.className = 'message-avatar';
+        if (type === 'ai') {
+            avatar.innerHTML = '<svg width="16" height="16" viewBox="0 0 16 16" fill="white"><circle cx="8" cy="8" r="6"/></svg>';
+        }
+        
+        const content = document.createElement('div');
+        content.className = 'message-content';
+        content.textContent = text;
+        
+        messageDiv.appendChild(avatar);
+        messageDiv.appendChild(content);
+        demoMessages.appendChild(messageDiv);
+        
+        // Scroll to bottom
+        demoMessages.scrollTop = demoMessages.scrollHeight;
+    }
+    
+    function getAIResponse(question) {
+        const q = question.toLowerCase();
+        
+        if (q.includes('vital')) {
+            return 'Latest vitals: BP 120/80 mmHg, HR 72 bpm, Temp 98.6°F, SpO2 98%. All parameters within normal range.';
+        } else if (q.includes('lab')) {
+            return 'Recent labs show: CBC normal, Glucose 102 mg/dL (slightly elevated), Creatinine 0.9 mg/dL (normal). HbA1c at 6.2% indicates prediabetes.';
+        } else if (q.includes('med')) {
+            return 'Current medications: Lisinopril 10mg daily, Metformin 500mg BID, Aspirin 81mg daily. No known drug interactions detected.';
+        } else if (q.includes('interact')) {
+            return 'No critical drug interactions detected. Current medications are compatible. Continue monitoring glucose levels due to prediabetic status.';
+        } else {
+            return 'I can help you analyze patient vitals, lab results, medications, and detect potential drug interactions. What would you like to know?';
+        }
+    }
+});
+
+// Smooth scroll
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
+    anchor.addEventListener('click', function(e) {
         e.preventDefault();
         const target = document.querySelector(this.getAttribute('href'));
         if (target) {
@@ -12,66 +168,53 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Navbar background on scroll
-const navbar = document.querySelector('.navbar');
-let lastScroll = 0;
-
+// Add parallax effect to shapes
 window.addEventListener('scroll', () => {
-    const currentScroll = window.pageYOffset;
+    const scrolled = window.pageYOffset;
+    const shapes = document.querySelectorAll('.shape');
     
-    if (currentScroll > 50) {
-        navbar.style.background = 'rgba(255, 255, 255, 0.95)';
-        navbar.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.1)';
-    } else {
-        navbar.style.background = 'rgba(255, 255, 255, 0.8)';
-        navbar.style.boxShadow = 'none';
-    }
-    
-    lastScroll = currentScroll;
-});
-
-// Intersection Observer for fade-in animations
-const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
-};
-
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.style.opacity = '1';
-            entry.target.style.transform = 'translateY(0)';
-        }
+    shapes.forEach((shape, index) => {
+        const speed = (index + 1) * 0.3;
+        shape.style.transform = `translateY(${scrolled * speed}px)`;
     });
-}, observerOptions);
-
-// Observe feature cards
-document.querySelectorAll('.feature-card').forEach((card, index) => {
-    card.style.opacity = '0';
-    card.style.transform = 'translateY(30px)';
-    card.style.transition = `all 0.6s ease ${index * 0.1}s`;
-    observer.observe(card);
 });
 
-// Button interactions
-document.querySelectorAll('.btn-primary, .btn-secondary').forEach(button => {
+// Add interactive hover effects to feature cards
+document.querySelectorAll('.feature-card').forEach(card => {
+    card.addEventListener('mouseenter', function() {
+        this.style.borderColor = 'var(--primary)';
+        const icon = this.querySelector('.feature-icon');
+        icon.style.transform = 'scale(1.1) rotate(5deg)';
+    });
+    
+    card.addEventListener('mouseleave', function() {
+        this.style.borderColor = 'var(--border)';
+        const icon = this.querySelector('.feature-icon');
+        icon.style.transform = 'scale(1) rotate(0deg)';
+    });
+});
+
+// Add ripple effect to buttons
+document.querySelectorAll('.btn-hero, .btn-primary, .btn-cta').forEach(button => {
     button.addEventListener('click', function(e) {
-        // Create ripple effect
         const ripple = document.createElement('span');
         const rect = this.getBoundingClientRect();
         const size = Math.max(rect.width, rect.height);
         const x = e.clientX - rect.left - size / 2;
         const y = e.clientY - rect.top - size / 2;
         
-        ripple.style.width = ripple.style.height = size + 'px';
-        ripple.style.left = x + 'px';
-        ripple.style.top = y + 'px';
-        ripple.style.position = 'absolute';
-        ripple.style.borderRadius = '50%';
-        ripple.style.background = 'rgba(255, 255, 255, 0.5)';
-        ripple.style.transform = 'scale(0)';
-        ripple.style.animation = 'ripple 0.6s ease-out';
-        ripple.style.pointerEvents = 'none';
+        ripple.style.cssText = `
+            position: absolute;
+            width: ${size}px;
+            height: ${size}px;
+            left: ${x}px;
+            top: ${y}px;
+            background: rgba(255, 255, 255, 0.5);
+            border-radius: 50%;
+            transform: scale(0);
+            animation: ripple 0.6s ease-out;
+            pointer-events: none;
+        `;
         
         this.style.position = 'relative';
         this.style.overflow = 'hidden';
@@ -93,171 +236,4 @@ style.textContent = `
 `;
 document.head.appendChild(style);
 
-// Parallax effect for gradient orbs
-window.addEventListener('scroll', () => {
-    const scrolled = window.pageYOffset;
-    const orbs = document.querySelectorAll('.gradient-orb');
-    
-    orbs.forEach((orb, index) => {
-        const speed = (index + 1) * 0.5;
-        orb.style.transform = `translateY(${scrolled * speed}px)`;
-    });
-});
-
-// Interactive code window typing effect
-const codeContent = document.querySelector('.code-content code');
-if (codeContent) {
-    const originalHTML = codeContent.innerHTML;
-    let isVisible = false;
-    
-    const codeObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting && !isVisible) {
-                isVisible = true;
-                typeCode();
-            }
-        });
-    }, { threshold: 0.5 });
-    
-    codeObserver.observe(codeContent);
-    
-    function typeCode() {
-        codeContent.innerHTML = '';
-        let index = 0;
-        const text = originalHTML;
-        
-        function type() {
-            if (index < text.length) {
-                codeContent.innerHTML = text.substring(0, index + 1);
-                index++;
-                
-                // Random typing speed for more realistic effect
-                const speed = text[index] === '<' ? 0 : Math.random() * 20 + 10;
-                setTimeout(type, speed);
-            }
-        }
-        
-        type();
-    }
-}
-
-// Add active state to feature cards on hover
-document.querySelectorAll('.feature-card').forEach(card => {
-    card.addEventListener('mouseenter', function() {
-        this.style.background = 'linear-gradient(135deg, #ffffff 0%, #EFF6FF 100%)';
-    });
-    
-    card.addEventListener('mouseleave', function() {
-        this.style.background = 'white';
-    });
-});
-
-// Dynamic stats counter animation
-function animateCounter(element, target, duration = 2000) {
-    const start = 0;
-    const increment = target / (duration / 16);
-    let current = start;
-    
-    const timer = setInterval(() => {
-        current += increment;
-        if (current >= target) {
-            element.textContent = target;
-            clearInterval(timer);
-        } else {
-            element.textContent = Math.floor(current);
-        }
-    }, 16);
-}
-
-// Observe stats section
-const statsObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            const statNumbers = entry.target.querySelectorAll('.stat-number');
-            statNumbers.forEach(stat => {
-                const text = stat.textContent;
-                if (text.includes('%')) {
-                    const num = parseFloat(text);
-                    stat.textContent = '0%';
-                    animateCounter(stat, num);
-                    setInterval(() => {
-                        stat.textContent = num + '%';
-                    }, 2000);
-                }
-            });
-            statsObserver.unobserve(entry.target);
-        }
-    });
-}, { threshold: 0.5 });
-
-const statsSection = document.querySelector('.stats');
-if (statsSection) {
-    statsObserver.observe(statsSection);
-}
-
-// Add cursor trail effect for hero section
-const hero = document.querySelector('.hero');
-if (hero) {
-    hero.addEventListener('mousemove', (e) => {
-        const rect = hero.getBoundingClientRect();
-        const x = e.clientX - rect.left;
-        const y = e.clientY - rect.top;
-        
-        // Create a small dot that follows cursor
-        const dot = document.createElement('div');
-        dot.style.position = 'absolute';
-        dot.style.left = x + 'px';
-        dot.style.top = y + 'px';
-        dot.style.width = '4px';
-        dot.style.height = '4px';
-        dot.style.background = 'rgba(59, 130, 246, 0.3)';
-        dot.style.borderRadius = '50%';
-        dot.style.pointerEvents = 'none';
-        dot.style.transition = 'all 0.3s ease';
-        
-        hero.style.position = 'relative';
-        hero.appendChild(dot);
-        
-        setTimeout(() => {
-            dot.style.opacity = '0';
-            dot.style.transform = 'scale(2)';
-        }, 10);
-        
-        setTimeout(() => dot.remove(), 310);
-    });
-}
-
-// Mobile menu toggle (for responsive design)
-const createMobileMenu = () => {
-    const navLinks = document.querySelector('.nav-links');
-    const menuButton = document.createElement('button');
-    menuButton.className = 'mobile-menu-button';
-    menuButton.innerHTML = `
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <line x1="3" y1="12" x2="21" y2="12"></line>
-            <line x1="3" y1="6" x2="21" y2="6"></line>
-            <line x1="3" y1="18" x2="21" y2="18"></line>
-        </svg>
-    `;
-    
-    if (window.innerWidth <= 640) {
-        const navContent = document.querySelector('.nav-content');
-        navContent.appendChild(menuButton);
-        
-        menuButton.addEventListener('click', () => {
-            navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
-        });
-    }
-};
-
-// Initialize on load
-window.addEventListener('load', () => {
-    createMobileMenu();
-});
-
-// Re-initialize on resize
-window.addEventListener('resize', () => {
-    createMobileMenu();
-});
-
-console.log('🚀 Aliva landing page loaded successfully!');
+console.log('🚀 Aliva - Modern AI Landing Page Ready');

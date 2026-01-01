@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Request Demo - Aliva Health</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="demo-page.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <a href="index.html" class="logo">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                        <circle cx="16" cy="16" r="14" stroke="url(#gradient)" stroke-width="2"/>
+                        <path d="M16 8L20 16L16 24L12 16L16 8Z" fill="url(#gradient)"/>
+                        <defs>
+                            <linearGradient id="gradient" x1="0" y1="0" x2="32" y2="32">
+                                <stop offset="0%" stop-color="#3B82F6"/>
+                                <stop offset="100%" stop-color="#1D4ED8"/>
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                    <span>Aliva</span>
+                </a>
+                <div class="nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="index.html#features">Features</a>
+                    <a href="index.html#technology">Technology</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Demo Request Section -->
+    <section class="demo-section">
+        <div class="container">
+            <div class="demo-header">
+                <h1>Aliva Health Demo</h1>
+                <p>Request a demo to see how Aliva could transform your clinical workflow and improve patient outcomes.</p>
+            </div>
+
+            <div class="demo-content">
+                <!-- Left Side - Benefits -->
+                <div class="demo-benefits">
+                    <h2>Built for Healthcare Professionals</h2>
+                    
+                    <div class="benefit-item">
+                        <div class="benefit-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M9 11L12 14L22 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M21 12V19C21 20.1046 20.1046 21 19 21H5C3.89543 21 3 20.1046 3 19V5C3 3.89543 3.89543 3 5 3H16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                        <div class="benefit-text">
+                            <h3>Emergency Department Clinicians</h3>
+                            <p>Real-time patient data aggregation with instant conflict detection for drug-allergy interactions and critical alerts.</p>
+                        </div>
+                    </div>
+
+                    <div class="benefit-item">
+                        <div class="benefit-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/>
+                                <path d="M12 6V12L16 14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                        <div class="benefit-text">
+                            <h3>Hospital Administrators</h3>
+                            <p>Improve operational efficiency across departments with comprehensive clinical intelligence and data-driven insights.</p>
+                        </div>
+                    </div>
+
+                    <div class="benefit-item">
+                        <div class="benefit-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M13 2L3 14H12L11 22L21 10H12L13 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <div class="benefit-text">
+                            <h3>Healthcare IT Teams</h3>
+                            <p>Seamless FHIR integration with existing EHR systems. Enterprise-grade security with HIPAA compliance built-in.</p>
+                        </div>
+                    </div>
+
+                    <div class="demo-stats">
+                        <div class="demo-stat">
+                            <div class="stat-number">50%</div>
+                            <div class="stat-label">Faster Clinical Decisions</div>
+                        </div>
+                        <div class="demo-stat">
+                            <div class="stat-number">99.9%</div>
+                            <div class="stat-label">Data Accuracy</div>
+                        </div>
+                        <div class="demo-stat">
+                            <div class="stat-number">24/7</div>
+                            <div class="stat-label">Support Available</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Side - Form -->
+                <div class="demo-form-container">
+                    <div class="demo-form-card">
+                        <h2>Request a Demo</h2>
+                        <p class="form-subtitle">Fill out the form below and our team will reach out within 24 hours.</p>
+                        
+                        <form id="demoForm" action="https://formspree.io/f/xpqwzygz" method="POST" class="demo-form">
+                            <div class="form-group">
+                                <label for="firstName">First Name <span class="required">*</span></label>
+                                <input type="text" id="firstName" name="firstName" required placeholder="Enter your first name">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="lastName">Last Name <span class="required">*</span></label>
+                                <input type="text" id="lastName" name="lastName" required placeholder="Enter your last name">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Email <span class="required">*</span></label>
+                                <input type="email" id="email" name="email" required placeholder="you@example.com">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" name="phone" placeholder="(555) 123-4567">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="organization">Organization <span class="required">*</span></label>
+                                <input type="text" id="organization" name="organization" required placeholder="Hospital or clinic name">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="role">Your Role <span class="required">*</span></label>
+                                <select id="role" name="role" required>
+                                    <option value="">Select your role</option>
+                                    <option value="physician">Physician</option>
+                                    <option value="nurse">Nurse</option>
+                                    <option value="administrator">Healthcare Administrator</option>
+                                    <option value="it">IT Professional</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="department">Department</label>
+                                <select id="department" name="department">
+                                    <option value="">Select department</option>
+                                    <option value="emergency">Emergency Department</option>
+                                    <option value="icu">Intensive Care Unit</option>
+                                    <option value="general">General Medicine</option>
+                                    <option value="surgery">Surgery</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message">How can Aliva help you?</label>
+                                <textarea id="message" name="message" rows="4" placeholder="Tell us about your challenges and what you're looking for..."></textarea>
+                            </div>
+
+                            <button type="submit" class="btn-primary btn-large btn-full">
+                                Submit Request
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                    <path d="M4 10H16M16 10L11 5M16 10L11 15" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                </svg>
+                            </button>
+
+                            <p class="form-privacy">
+                                By submitting this form, you agree to our <a href="#privacy">Privacy Policy</a> and <a href="#terms">Terms of Service</a>.
+                            </p>
+                        </form>
+
+                        <div id="successMessage" class="success-message" style="display: none;">
+                            <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                                <circle cx="24" cy="24" r="22" fill="#10B981" opacity="0.1"/>
+                                <path d="M16 24L21 29L32 18" stroke="#10B981" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <h3>Thank You!</h3>
+                            <p>We've received your demo request. Our team will contact you within 24 hours.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Helpful Links Section -->
+    <section class="helpful-links">
+        <div class="container">
+            <h2>Helpful Resources</h2>
+            <div class="links-grid">
+                <div class="link-category">
+                    <h3>Product</h3>
+                    <ul>
+                        <li><a href="index.html#features">Features Overview</a></li>
+                        <li><a href="index.html#technology">Technology Stack</a></li>
+                        <li><a href="#pricing">Pricing Plans</a></li>
+                        <li><a href="#integrations">EHR Integrations</a></li>
+                        <li><a href="#security">Security & Compliance</a></li>
+                    </ul>
+                </div>
+
+                <div class="link-category">
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="#documentation">Documentation</a></li>
+                        <li><a href="#api">API Reference</a></li>
+                        <li><a href="#case-studies">Case Studies</a></li>
+                        <li><a href="#webinars">Webinars</a></li>
+                        <li><a href="#blog">Blog</a></li>
+                    </ul>
+                </div>
+
+                <div class="link-category">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="#about">About Aliva</a></li>
+                        <li><a href="#careers">Careers</a></li>
+                        <li><a href="#press">Press Kit</a></li>
+                        <li><a href="#contact">Contact Us</a></li>
+                        <li><a href="#partners">Partners</a></li>
+                    </ul>
+                </div>
+
+                <div class="link-category">
+                    <h3>Support</h3>
+                    <ul>
+                        <li><a href="#help-center">Help Center</a></li>
+                        <li><a href="#training">Training Videos</a></li>
+                        <li><a href="#status">System Status</a></li>
+                        <li><a href="#community">Community Forum</a></li>
+                        <li><a href="mailto:support@aliva.health">Email Support</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                            <circle cx="16" cy="16" r="14" stroke="url(#gradient2)" stroke-width="2"/>
+                            <path d="M16 8L20 16L16 24L12 16L16 8Z" fill="url(#gradient2)"/>
+                            <defs>
+                                <linearGradient id="gradient2" x1="0" y1="0" x2="32" y2="32">
+                                    <stop offset="0%" stop-color="#3B82F6"/>
+                                    <stop offset="100%" stop-color="#1D4ED8"/>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                        <span>Aliva</span>
+                    </div>
+                    <p>Transforming healthcare through intelligent clinical decision support.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Product</h4>
+                        <a href="index.html#features">Features</a>
+                        <a href="index.html#technology">Technology</a>
+                        <a href="#pricing">Pricing</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Company</h4>
+                        <a href="#about">About</a>
+                        <a href="#careers">Careers</a>
+                        <a href="#contact">Contact</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Resources</h4>
+                        <a href="#docs">Documentation</a>
+                        <a href="#blog">Blog</a>
+                        <a href="#support">Support</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Aliva Health. All rights reserved.</p>
+                <div class="footer-legal">
+                    <a href="#privacy">Privacy Policy</a>
+                    <a href="#terms">Terms of Service</a>
+                    <a href="#hipaa">HIPAA Compliance</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="demo-page.js"></script>
+</body>
+</html>
