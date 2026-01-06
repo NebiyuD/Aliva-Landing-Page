@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing - Aliva</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="pricing.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <a href="index.html" class="logo">
+                    <div class="logo-icon">
+                        <div class="logo-dot"></div>
+                        <div class="logo-ring"></div>
+                    </div>
+                    <span>Aliva</span>
+                </a>
+                <div class="nav-links">
+                    <a href="index.html#features">Features</a>
+                    <a href="demo.html">Demo</a>
+                    <a href="pricing.html" class="active">Pricing</a>
+                    <a href="demo.html" class="btn-primary">Get Started</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pricing-hero">
+        <div class="container">
+            <div class="hero-content">
+                <span class="hero-badge">Simple, Transparent Pricing</span>
+                <h1 class="hero-title">Choose the perfect plan for your organization</h1>
+                <p class="hero-description">Start with a 14-day free trial. No credit card required. Cancel anytime.</p>
+                
+                <!-- Billing Toggle -->
+                <div class="billing-toggle">
+                    <span class="toggle-label">Monthly</span>
+                    <label class="switch">
+                        <input type="checkbox" id="billingToggle">
+                        <span class="slider"></span>
+                    </label>
+                    <span class="toggle-label">Annual <span class="save-badge">Save 20%</span></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Cards -->
+    <section class="pricing-section">
+        <div class="container">
+            <div class="pricing-grid">
+                
+                <!-- Starter Plan -->
+                <div class="pricing-card">
+                    <div class="card-header">
+                        <h3 class="plan-name">Starter</h3>
+                        <p class="plan-description">Perfect for small practices getting started</p>
+                    </div>
+                    <div class="card-price">
+                        <div class="price-wrapper">
+                            <span class="currency">$</span>
+                            <span class="amount monthly">99</span>
+                            <span class="amount annual" style="display: none;">79</span>
+                            <span class="period">/month</span>
+                        </div>
+                        <p class="price-note annual-note" style="display: none;">Billed annually at $948</p>
+                    </div>
+                    <ul class="features-list">
+                        <li>
+                            <svg class="check-icon" width="20" height="20" viewBox="0 0 20 20">
+                                <path d="M7 10L9 12L13 8" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/>
+                                <circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.5" fill="none"/>
+                            </svg>
+                            Up to 100 patients per month
+                        </li>
+                        <li>
+                            <svg class="check-icon" width="20" height="20" viewBox="0 0 20 20">
+                                <path d="M7 10L9 12L13 8" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/>
+                                <circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.5" fill="none"/>
+                            </svg>
+                            Basic AI analysis
+                        </li>
+                        <li>
+                            <svg class="check-icon" width="20" height="20" viewBox="0 0 20 20">
+                                <path d="M7 10L9 12L13 8" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/>
+                                <circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.5" fill="none"/>
+                            </svg>
+                            Email support
+                        </li>
+                        <li>
+                            <svg class="check-icon" width="20" height="20" viewBox="0 0 20 20">
+                                <path d="M7 10L9 12L13 8" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/>
+                                <circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.5" fill="none"/>
+                            </svg>
+                            FHIR integration
+                        </li>
+                        <li>
+                            <svg class="check-icon" width="20" height="20" viewBox="0 0 20 20">
+                                <path d="M7 10L9 12L13 8" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/>
+                                <circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.5" fill="none"/>
+                            </svg>
+                            Standard security
+                        </li>
+                    </ul>
+                    <button class="cta-button">Start Free Trial</button>
+                </div>
+
+                <!-- Professional Plan (Popular) -->
+                <div class="pricing-card popular">
+                    <div class="popular-badge">Most Popular</div>
+                    <div class="card-header">
+                        <h3 class="plan-name">Professional</h3>
+                        <p class="plan-description">For growing practices and hospitals</p>
+                    </div>
+                    <div class="card-price">
+                        <div class="price-wrapper">
+                            <span class="currency">$</span>
+                            <span class="amount monthly">299</span>
+                            <span class="amount annual" style="display: none;">239</span>
+                            <span class="period">/month</span>
+                        </div>
+                        <p class="price-note annual-note" style="display: none;">Billed annually at $2,868</p>
+                    </div>
+                    <ul class="features-list">
+                        <li>
+                            <svg class="check-icon" width="20" height="20" viewBox="0 0 20 20">
+                                <path d="M7 10L9 12L13 8" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/>
+                                <circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.5" fill="none"/>
+                            </svg>
+                            Up to 1,000 patients per month
+                        </li>
+                        <li>
+                            <svg class="check-icon" width="20" height="20" viewBox="0 0 20 20">
+                                <path d="M7 10L9 12L13 8" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/>
+                                <circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.5" fill="none"/>
+                            </svg>
+                            Advanced AI analysis
+                        </li>
+                        <li>
+                            <svg class="check-icon" width="20" height="20" viewBox="0 0 20 20">
+                                <path d="M7 10L9 12L13 8" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/>
+                                <circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.5" fill="none"/>
+                            </svg>
+                            Priority support (24/7)
+                        </li>
+                        <li>
+                            <svg class="check-icon" width="20" height="20" viewBox="0 0 20 20">
+                                <path d="M7 10L9 12L13 8" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/>
+                                <circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.5" fill="none"/>
+                            </svg>
+                            Custom integrations
+                        </li>
+                        <li>
+                            <svg class="check-icon" width="20" height="20" viewBox="0 0 20 20">
+                                <path d="M7 10L9 12L13 8" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/>
+                                <circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.5" fill="none"/>
+                            </svg>
+                            Advanced analytics
+                        </li>
+                        <li>
+                            <svg class="check-icon" width="20" height="20" viewBox="0 0 20 20">
+                                <path d="M7 10L9 12L13 8" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/>
+                                <circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.5" fill="none"/>
+                            </svg>
+                            API access
+                        </li>
+                    </ul>
+                    <button class="cta-button">Start Free Trial</button>
+                </div>
+
+                <!-- Enterprise Plan -->
+                <div class="pricing-card">
+                    <div class="card-header">
+                        <h3 class="plan-name">Enterprise</h3>
+                        <p class="plan-description">For large healthcare organizations</p>
+                    </div>
+                    <div class="card-price">
+                        <div class="price-wrapper">
+                            <span class="amount custom">Custom</span>
+                        </div>
+                        <p class="price-note">Tailored to your needs</p>
+                    </div>
+                    <ul class="features-list">
+                        <li>
+                            <svg class="check-icon" width="20" height="20" viewBox="0 0 20 20">
+                                <path d="M7 10L9 12L13 8" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/>
+                                <circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.5" fill="none"/>
+                            </svg>
+                            Unlimited patients
+                        </li>
+                        <li>
+                            <svg class="check-icon" width="20" height="20" viewBox="0 0 20 20">
+                                <path d="M7 10L9 12L13 8" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/>
+                                <circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.5" fill="none"/>
+                            </svg>
+                            Custom AI models
+                        </li>
+                        <li>
+                            <svg class="check-icon" width="20" height="20" viewBox="0 0 20 20">
+                                <path d="M7 10L9 12L13 8" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/>
+                                <circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.5" fill="none"/>
+                            </svg>
+                            Dedicated account manager
+                        </li>
+                        <li>
+                            <svg class="check-icon" width="20" height="20" viewBox="0 0 20 20">
+                                <path d="M7 10L9 12L13 8" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/>
+                                <circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.5" fill="none"/>
+                            </svg>
+                            EHR Intergration
+                        </li>
+                        <li>
+                            <svg class="check-icon" width="20" height="20" viewBox="0 0 20 20">
+                                <path d="M7 10L9 12L13 8" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/>
+                                <circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.5" fill="none"/>
+                            </svg>
+                            SLA guarantees
+                        </li>
+                        <li>
+                            <svg class="check-icon" width="20" height="20" viewBox="0 0 20 20">
+                                <path d="M7 10L9 12L13 8" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/>
+                                <circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.5" fill="none"/>
+                            </svg>
+                            On-premise deployment
+                        </li>
+                    </ul>
+                    <a href="../Demo page folder/demo.html" class="cta-button">Contact Sales</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Frequently Asked Questions</h2>
+                <p>Everything you need to know about Aliva pricing</p>
+            </div>
+            
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>How does the free trial work?</span>
+                        <svg class="faq-icon" width="20" height="20" viewBox="0 0 20 20">
+                            <path d="M6 8L10 12L14 8" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>You get full access to all features for 14 days. No credit card required. After the trial, you can choose a plan or your account will be paused.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Can I change plans later?</span>
+                        <svg class="faq-icon" width="20" height="20" viewBox="0 0 20 20">
+                            <path d="M6 8L10 12L14 8" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes! You can upgrade or downgrade your plan at any time. Changes take effect immediately, and billing is prorated.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Is my data secure?</span>
+                        <svg class="faq-icon" width="20" height="20" viewBox="0 0 20 20">
+                            <path d="M6 8L10 12L14 8" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Absolutely. We're HIPAA compliant with end-to-end encryption, regular security audits, and SOC 2 Type II certification.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>What payment methods do you accept?</span>
+                        <svg class="faq-icon" width="20" height="20" viewBox="0 0 20 20">
+                            <path d="M6 8L10 12L14 8" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>We accept all major credit cards (Visa, Mastercard, Amex), ACH transfers, and can arrange wire transfers for Enterprise plans.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Do you offer discounts for nonprofits?</span>
+                        <svg class="faq-icon" width="20" height="20" viewBox="0 0 20 20">
+                            <path d="M6 8L10 12L14 8" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes! We offer a 30% discount for verified nonprofit healthcare organizations. Contact our sales team to learn more.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>What happens if I exceed my patient limit?</span>
+                        <svg class="faq-icon" width="20" height="20" viewBox="0 0 20 20">
+                            <path d="M6 8L10 12L14 8" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>We'll notify you when you're approaching your limit. You can upgrade to a higher tier, or pay for additional capacity at $1 per patient.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to get started?</h2>
+                <p>Join hundreds of healthcare organizations using Aliva to transform patient care</p>
+                <div class="cta-buttons">
+                    <a href="demo.html" class="btn-cta">Start Free Trial</a>
+                    <a href="demo.html" class="btn-outline">Schedule a Demo</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <div class="logo-icon">
+                            <div class="logo-dot"></div>
+                            <div class="logo-ring"></div>
+                        </div>
+                        <span>Aliva</span>
+                    </div>
+                    <p>Transforming healthcare through intelligent clinical decision support.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-col">
+                        <h4>Product</h4>
+                        <a href="index.html#features">Features</a>
+                        <a href="pricing.html">Pricing</a>
+                        <a href="demo.html">Demo</a>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Company</h4>
+                        <a href="#">About</a>
+                        <a href="#">Careers</a>
+                        <a href="#">Contact</a>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Resources</h4>
+                        <a href="#">Documentation</a>
+                        <a href="#">Blog</a>
+                        <a href="#">Support</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Aliva Health. All rights reserved.</p>
+                <div class="footer-legal">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">HIPAA Compliance</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="pricing.js"></script>
+</body>
+</html>
