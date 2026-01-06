@@ -401,6 +401,9 @@ input:checked + .slider:before {
     cursor: pointer;
     transition: all 0.3s ease;
     box-shadow: 0 4px 12px rgba(14, 165, 233, 0.3);
+    text-decoration: none;
+    display: block;
+    text-align: center;
 }
 
 .cta-button:hover {
