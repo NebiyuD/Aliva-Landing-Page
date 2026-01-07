@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support - Aliva Health</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="support-page.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <a href="index.html" class="logo">
+                    <div class="logo-icon">
+                        <div class="logo-dot"></div>
+                        <div class="logo-ring"></div>
+                    </div>
+                    <span>Aliva</span>
+                </a>
+                <div class="nav-links">
+                    <a href="index.html#features">Features</a>
+                    <a href="demo.html">Demo</a>
+                    <a href="pricing.html">Pricing</a>
+                    <a href="demo.html" class="btn-primary">Get Started</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Support Hero Section -->
+    <section class="support-hero">
+        <div class="container">
+            <div class="hero-content">
+                <span class="hero-badge">
+                    <span class="badge-pulse"></span>
+                    Help Center
+                </span>
+                <h1 class="hero-title">How Can We Help You?</h1>
+                <p class="hero-description">Find answers, get support, and connect with our team. We're here to help you succeed with Aliva.</p>
+
+                <!-- Search Box -->
+                <div class="search-box">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                        <circle cx="11" cy="11" r="8" stroke="currentColor" stroke-width="2"/>
+                        <path d="M21 21L16.65 16.65" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                    <input type="text" id="searchInput" placeholder="Search for help articles, FAQs, or topics...">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Links Section -->
+    <section class="quick-links-section">
+        <div class="container">
+            <div class="quick-links-grid">
+                <a href="#faq" class="quick-link-card">
+                    <div class="quick-link-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
+                            <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
+                            <path d="M9 9C9 7.34315 10.3431 6 12 6C13.6569 6 15 7.34315 15 9C15 10.3062 14.1652 11.4175 13 11.8293V13" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            <circle cx="12" cy="17" r="1" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <h3>FAQs</h3>
+                    <p>Find answers to commonly asked questions</p>
+                </a>
+
+                <a href="#contact" class="quick-link-card">
+                    <div class="quick-link-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
+                            <path d="M21 15C21 15.5304 20.7893 16.0391 20.4142 16.4142C20.0391 16.7893 19.5304 17 19 17H7L3 21V5C3 4.46957 3.21071 3.96086 3.58579 3.58579C3.96086 3.21071 4.46957 3 5 3H19C19.5304 3 20.0391 3.21071 20.4142 3.58579C20.7893 3.96086 21 4.46957 21 5V15Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h3>Contact Support</h3>
+                    <p>Get in touch with our support team</p>
+                </a>
+
+                <a href="#documentation" class="quick-link-card">
+                    <div class="quick-link-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
+                            <path d="M4 19.5C4 18.837 4.26339 18.2011 4.73223 17.7322C5.20107 17.2634 5.83696 17 6.5 17H20" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M6.5 2H20V22H6.5C5.83696 22 5.20107 21.7366 4.73223 21.2678C4.26339 20.7989 4 20.163 4 19.5V4.5C4 3.83696 4.26339 3.20107 4.73223 2.73223C5.20107 2.26339 5.83696 2 6.5 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h3>Documentation</h3>
+                    <p>Explore guides and API references</p>
+                </a>
+
+                <a href="#status" class="quick-link-card">
+                    <div class="quick-link-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
+                            <path d="M22 12H18L15 21L9 3L6 12H2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h3>System Status</h3>
+                    <p>Check platform uptime and incidents</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="faq-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Frequently Asked Questions</h2>
+                <p>Quick answers to help you get started</p>
+            </div>
+
+            <!-- FAQ Categories -->
+            <div class="faq-categories">
+                <button class="faq-category active" data-category="all">All</button>
+                <button class="faq-category" data-category="getting-started">Getting Started</button>
+                <button class="faq-category" data-category="account">Account & Billing</button>
+                <button class="faq-category" data-category="features">Features</button>
+                <button class="faq-category" data-category="security">Security</button>
+            </div>
+
+            <div class="faq-grid">
+                <!-- Getting Started FAQs -->
+                <div class="faq-item" data-category="getting-started">
+                    <button class="faq-question">
+                        <span>How do I get started with Aliva?</span>
+                        <svg class="faq-icon" width="20" height="20" viewBox="0 0 20 20">
+                            <path d="M6 8L10 12L14 8" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Getting started is easy! Simply <a href="demo.html">request a demo</a> or start your 14-day free trial. Our onboarding team will guide you through the setup process, including EHR integration and staff training.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-category="getting-started">
+                    <button class="faq-question">
+                        <span>What EHR systems does Aliva integrate with?</span>
+                        <svg class="faq-icon" width="20" height="20" viewBox="0 0 20 20">
+                            <path d="M6 8L10 12L14 8" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Aliva integrates with all major EHR systems through FHIR standards, including Epic, Cerner, Meditech, Allscripts, and athenahealth. Custom integrations are available for enterprise customers.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-category="getting-started">
+                    <button class="faq-question">
+                        <span>How long does implementation take?</span>
+                        <svg class="faq-icon" width="20" height="20" viewBox="0 0 20 20">
+                            <path d="M6 8L10 12L14 8" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Standard implementations typically take 2-4 weeks depending on your organization's size and complexity. This includes EHR integration, staff training, and workflow customization. Enterprise deployments may require additional time.</p>
+                    </div>
+                </div>
+
+                <!-- Account & Billing FAQs -->
+                <div class="faq-item" data-category="account">
+                    <button class="faq-question">
+                        <span>How does the free trial work?</span>
+                        <svg class="faq-icon" width="20" height="20" viewBox="0 0 20 20">
+                            <path d="M6 8L10 12L14 8" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>You get full access to all features for 14 days with no credit card required. After the trial ends, you can choose a plan that fits your needs or your account will be paused until you subscribe.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-category="account">
+                    <button class="faq-question">
+                        <span>Can I change my plan later?</span>
+                        <svg class="faq-icon" width="20" height="20" viewBox="0 0 20 20">
+                            <path d="M6 8L10 12L14 8" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes! You can upgrade or downgrade your plan at any time from your account settings. Changes take effect immediately, and billing is prorated automatically.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-category="account">
+                    <button class="faq-question">
+                        <span>What payment methods do you accept?</span>
+                        <svg class="faq-icon" width="20" height="20" viewBox="0 0 20 20">
+                            <path d="M6 8L10 12L14 8" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>We accept all major credit cards (Visa, Mastercard, American Express), ACH bank transfers, and wire transfers for enterprise accounts. Annual plans can also be paid by invoice.</p>
+                    </div>
+                </div>
+
+                <!-- Features FAQs -->
+                <div class="faq-item" data-category="features">
+                    <button class="faq-question">
+                        <span>What AI capabilities does Aliva provide?</span>
+                        <svg class="faq-icon" width="20" height="20" viewBox="0 0 20 20">
+                            <path d="M6 8L10 12L14 8" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Aliva uses advanced AI to provide real-time patient data analysis, drug interaction detection, clinical decision support, predictive alerts, and natural language querying of patient records. Our AI is trained on medical literature and continuously updated.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-category="features">
+                    <button class="faq-question">
+                        <span>Can Aliva detect drug interactions?</span>
+                        <svg class="faq-icon" width="20" height="20" viewBox="0 0 20 20">
+                            <path d="M6 8L10 12L14 8" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes! Aliva automatically scans patient medications and alerts clinicians to potential drug-drug interactions, drug-allergy conflicts, and dosage concerns in real-time. Critical alerts are highlighted for immediate attention.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-category="features">
+                    <button class="faq-question">
+                        <span>Is there a mobile app available?</span>
+                        <svg class="faq-icon" width="20" height="20" viewBox="0 0 20 20">
+                            <path d="M6 8L10 12L14 8" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Aliva is fully responsive and works on any device through your web browser. Native iOS and Android apps are available for Professional and Enterprise plans, offering offline access and push notifications.</p>
+                    </div>
+                </div>
+
+                <!-- Security FAQs -->
+                <div class="faq-item" data-category="security">
+                    <button class="faq-question">
+                        <span>Is Aliva HIPAA compliant?</span>
+                        <svg class="faq-icon" width="20" height="20" viewBox="0 0 20 20">
+                            <path d="M6 8L10 12L14 8" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Absolutely. Aliva is fully HIPAA compliant with signed Business Associate Agreements (BAA) for all customers. We maintain SOC 2 Type II certification and undergo regular third-party security audits.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-category="security">
+                    <button class="faq-question">
+                        <span>How is my data protected?</span>
+                        <svg class="faq-icon" width="20" height="20" viewBox="0 0 20 20">
+                            <path d="M6 8L10 12L14 8" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>All data is encrypted at rest (AES-256) and in transit (TLS 1.3). We use role-based access controls, audit logging, and multi-factor authentication. Enterprise customers can opt for dedicated infrastructure or on-premise deployment.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-category="security">
+                    <button class="faq-question">
+                        <span>Where is my data stored?</span>
+                        <svg class="faq-icon" width="20" height="20" viewBox="0 0 20 20">
+                            <path d="M6 8L10 12L14 8" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Data is stored in HIPAA-compliant AWS data centers located in the United States. Enterprise customers can choose specific data residency regions or opt for on-premise deployment for complete control.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Support Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Contact Support</h2>
+                <p>Choose the best way to reach our team</p>
+            </div>
+
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
+                            <path d="M21 15C21 15.5304 20.7893 16.0391 20.4142 16.4142C20.0391 16.7893 19.5304 17 19 17H7L3 21V5C3 4.46957 3.21071 3.96086 3.58579 3.58579C3.96086 3.21071 4.46957 3 5 3H19C19.5304 3 20.0391 3.21071 20.4142 3.58579C20.7893 3.96086 21 4.46957 21 5V15Z" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <h3>Live Chat</h3>
+                    <p>Chat with our support team in real-time during business hours.</p>
+                    <div class="contact-availability">
+                        <span class="status-dot online"></span>
+                        Available Now
+                    </div>
+                    <button class="btn-contact" onclick="startLiveChat()">Start Chat</button>
+                </div>
+
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
+                            <path d="M4 4H20C21.1 4 22 4.9 22 6V18C22 19.1 21.1 20 20 20H4C2.9 20 2 19.1 2 18V6C2 4.9 2.9 4 4 4Z" stroke="currentColor" stroke-width="2"/>
+                            <path d="M22 6L12 13L2 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h3>Email Support</h3>
+                    <p>Send us a detailed message and we'll respond within 24 hours.</p>
+                    <div class="contact-availability">
+                        <span class="response-time">Response within 24h</span>
+                    </div>
+                    <a href="mailto:support@aliva.health" class="btn-contact">Send Email</a>
+                </div>
+
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
+                            <path d="M22 16.92V19.92C22 20.48 21.56 20.96 21 21C20.83 21.01 20.67 21 20.5 21C10.84 21 3 13.16 3 3.5C3 3.33 3.01 3.17 3.02 3C3.04 2.44 3.52 2 4.08 2H7.08C7.56 2 7.97 2.34 8.06 2.81C8.15 3.27 8.27 3.72 8.43 4.16C8.56 4.5 8.47 4.89 8.2 5.14L6.72 6.62C8.23 9.31 10.69 11.77 13.38 13.28L14.86 11.8C15.11 11.53 15.5 11.44 15.84 11.57C16.28 11.73 16.73 11.85 17.19 11.94C17.66 12.03 18 12.44 18 12.92V15.92C18 16.48 17.56 16.96 17 17C16.83 17.01 16.67 17 16.5 17C14.35 17 12.29 16.5 10.5 15.58" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h3>Phone Support</h3>
+                    <p>Speak directly with a support specialist for urgent issues.</p>
+                    <div class="contact-availability">
+                        <span class="response-time">Mon-Fri, 8am-8pm ET</span>
+                    </div>
+                    <a href="tel:+18005551234" class="btn-contact">1-800-555-1234</a>
+                </div>
+
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
+                            <path d="M17 21V19C17 17.9391 16.5786 16.9217 15.8284 16.1716C15.0783 15.4214 14.0609 15 13 15H5C3.93913 15 2.92172 15.4214 2.17157 16.1716C1.42143 16.9217 1 17.9391 1 19V21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            <circle cx="9" cy="7" r="4" stroke="currentColor" stroke-width="2"/>
+                            <path d="M23 21V19C22.9986 18.1137 22.7044 17.2528 22.1614 16.5523C21.6184 15.8519 20.8581 15.3516 20 15.13" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            <path d="M16 3.13C16.8604 3.35031 17.623 3.85071 18.1676 4.55232C18.7122 5.25392 19.0078 6.11683 19.0078 7.005C19.0078 7.89318 18.7122 8.75608 18.1676 9.45769C17.623 10.1593 16.8604 10.6597 16 10.88" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h3>Community Forum</h3>
+                    <p>Connect with other Aliva users, share tips, and get answers.</p>
+                    <div class="contact-availability">
+                        <span class="response-time">5,000+ members</span>
+                    </div>
+                    <a href="#community" class="btn-contact">Join Community</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Documentation Section -->
+    <section id="documentation" class="documentation-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Documentation & Resources</h2>
+                <p>Everything you need to make the most of Aliva</p>
+            </div>
+
+            <div class="docs-grid">
+                <a href="#" class="doc-card">
+                    <div class="doc-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M13 2H6C5.46957 2 4.96086 2.21071 4.58579 2.58579C4.21071 2.96086 4 3.46957 4 4V20C4 20.5304 4.21071 21.0391 4.58579 21.4142C4.96086 21.7893 5.46957 22 6 22H18C18.5304 22 19.0391 21.7893 19.4142 21.4142C19.7893 21.0391 20 20.5304 20 20V9L13 2Z" stroke="currentColor" stroke-width="2"/>
+                            <path d="M13 2V9H20" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <div class="doc-content">
+                        <h4>Getting Started Guide</h4>
+                        <p>Step-by-step setup instructions for new users</p>
+                    </div>
+                    <svg class="doc-arrow" width="20" height="20" viewBox="0 0 20 20">
+                        <path d="M7 4L13 10L7 16" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/>
+                    </svg>
+                </a>
+
+                <a href="#" class="doc-card">
+                    <div class="doc-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M16 18L22 12L16 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            <path d="M8 6L2 12L8 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <div class="doc-content">
+                        <h4>API Reference</h4>
+                        <p>Complete API documentation for developers</p>
+                    </div>
+                    <svg class="doc-arrow" width="20" height="20" viewBox="0 0 20 20">
+                        <path d="M7 4L13 10L7 16" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/>
+                    </svg>
+                </a>
+
+                <a href="#" class="doc-card">
+                    <div class="doc-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <rect x="2" y="3" width="20" height="14" rx="2" stroke="currentColor" stroke-width="2"/>
+                            <path d="M8 21H16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            <path d="M12 17V21" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <div class="doc-content">
+                        <h4>Video Tutorials</h4>
+                        <p>Watch step-by-step training videos</p>
+                    </div>
+                    <svg class="doc-arrow" width="20" height="20" viewBox="0 0 20 20">
+                        <path d="M7 4L13 10L7 16" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/>
+                    </svg>
+                </a>
+
+                <a href="#" class="doc-card">
+                    <div class="doc-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M14.7 6.3C14.5168 6.1137 14.2671 6.00846 14.0063 6.00846C13.7455 6.00846 13.4958 6.1137 13.3125 6.3L8.4125 11.2C8.2262 11.3832 8.12096 11.6329 8.12096 11.8937C8.12096 12.1546 8.2262 12.4043 8.4125 12.5875L13.3125 17.4875C13.4958 17.6738 13.7455 17.779 14.0063 17.779C14.2671 17.779 14.5168 17.6738 14.7 17.4875" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <div class="doc-content">
+                        <h4>Integration Guides</h4>
+                        <p>Connect Aliva with your existing systems</p>
+                    </div>
+                    <svg class="doc-arrow" width="20" height="20" viewBox="0 0 20 20">
+                        <path d="M7 4L13 10L7 16" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/>
+                    </svg>
+                </a>
+
+                <a href="#" class="doc-card">
+                    <div class="doc-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M12 22C12 22 20 18 20 12V5L12 2L4 5V12C4 18 12 22 12 22Z" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <div class="doc-content">
+                        <h4>Security & Compliance</h4>
+                        <p>HIPAA compliance and security documentation</p>
+                    </div>
+                    <svg class="doc-arrow" width="20" height="20" viewBox="0 0 20 20">
+                        <path d="M7 4L13 10L7 16" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/>
+                    </svg>
+                </a>
+
+                <a href="#" class="doc-card">
+                    <div class="doc-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M12 20H21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            <path d="M16.5 3.5C16.8978 3.10217 17.4374 2.87868 18 2.87868C18.2786 2.87868 18.5544 2.93355 18.8118 3.04015C19.0692 3.14676 19.303 3.30301 19.5 3.5C19.697 3.69698 19.8532 3.93083 19.9598 4.18821C20.0665 4.44558 20.1213 4.72142 20.1213 5C20.1213 5.27857 20.0665 5.55442 19.9598 5.81179C19.8532 6.06916 19.697 6.30301 19.5 6.5L7 19L3 20L4 16L16.5 3.5Z" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <div class="doc-content">
+                        <h4>Release Notes</h4>
+                        <p>Latest updates and new features</p>
+                    </div>
+                    <svg class="doc-arrow" width="20" height="20" viewBox="0 0 20 20">
+                        <path d="M7 4L13 10L7 16" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- System Status Section -->
+    <section id="status" class="status-section">
+        <div class="container">
+            <div class="status-card">
+                <div class="status-header">
+                    <div class="status-indicator operational">
+                        <span class="status-dot"></span>
+                        <span class="status-text">All Systems Operational</span>
+                    </div>
+                    <span class="status-updated">Updated 2 minutes ago</span>
+                </div>
+
+                <div class="status-grid">
+                    <div class="status-item">
+                        <span class="status-name">API Services</span>
+                        <span class="status-badge operational">Operational</span>
+                    </div>
+                    <div class="status-item">
+                        <span class="status-name">Web Application</span>
+                        <span class="status-badge operational">Operational</span>
+                    </div>
+                    <div class="status-item">
+                        <span class="status-name">EHR Integrations</span>
+                        <span class="status-badge operational">Operational</span>
+                    </div>
+                    <div class="status-item">
+                        <span class="status-name">AI Analysis Engine</span>
+                        <span class="status-badge operational">Operational</span>
+                    </div>
+                </div>
+
+                <div class="status-footer">
+                    <a href="#" class="status-link">View Status History</a>
+                    <a href="#" class="status-link">Subscribe to Updates</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Still Need Help?</h2>
+                <p>Our support team is ready to assist you with any questions</p>
+                <div class="cta-buttons">
+                    <a href="sales.html" class="btn-cta">Talk to Sales</a>
+                    <a href="demo.html" class="btn-outline">Request a Demo</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <div class="logo-icon">
+                            <div class="logo-dot"></div>
+                            <div class="logo-ring"></div>
+                        </div>
+                        <span>Aliva</span>
+                    </div>
+                    <p>Transforming healthcare through intelligent clinical decision support.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-col">
+                        <h4>Product</h4>
+                        <a href="index.html#features">Features</a>
+                        <a href="pricing.html">Pricing</a>
+                        <a href="demo.html">Demo</a>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Company</h4>
+                        <a href="#">About</a>
+                        <a href="#">Careers</a>
+                        <a href="sales.html">Contact Sales</a>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Resources</h4>
+                        <a href="#">Documentation</a>
+                        <a href="#">Blog</a>
+                        <a href="support.html">Support</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Aliva Health. All rights reserved.</p>
+                <div class="footer-legal">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">HIPAA Compliance</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="support-page.js"></script>
+</body>
+</html>
