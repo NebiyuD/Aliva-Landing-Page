@@ -1,0 +1,328 @@
+/* Legal Pages Specific Styles */
+
+/* Hero Section */
+.legal-hero {
+    padding: 160px 0 60px;
+    background: linear-gradient(180deg, rgba(14, 165, 233, 0.05) 0%, rgba(255, 255, 255, 0) 100%);
+    text-align: center;
+}
+
+.legal-hero .hero-content {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.legal-hero .hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    background: rgba(14, 165, 233, 0.1);
+    border: 1px solid rgba(14, 165, 233, 0.2);
+    border-radius: 50px;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--primary);
+    margin-bottom: 24px;
+    animation: fadeInUp 0.6s ease both;
+}
+
+.legal-hero .hero-title {
+    font-size: clamp(36px, 5vw, 52px);
+    font-weight: 800;
+    line-height: 1.15;
+    margin-bottom: 16px;
+    background: linear-gradient(135deg, var(--text), var(--primary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: fadeInUp 0.6s ease 0.1s both;
+}
+
+.legal-hero .hero-description {
+    font-size: 18px;
+    line-height: 1.7;
+    color: var(--text-light);
+    margin-bottom: 16px;
+    animation: fadeInUp 0.6s ease 0.2s both;
+}
+
+.legal-hero .last-updated {
+    font-size: 14px;
+    color: var(--text-light);
+    animation: fadeInUp 0.6s ease 0.3s both;
+}
+
+/* Legal Content Section */
+.legal-content {
+    padding: 60px 0 100px;
+}
+
+.legal-wrapper {
+    display: grid;
+    grid-template-columns: 240px 1fr;
+    gap: 60px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* Table of Contents */
+.legal-toc {
+    position: sticky;
+    top: 100px;
+    height: fit-content;
+}
+
+.legal-toc h4 {
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--text-light);
+    margin-bottom: 16px;
+}
+
+.legal-toc nav {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.legal-toc nav a {
+    font-size: 14px;
+    color: var(--text-light);
+    text-decoration: none;
+    padding: 8px 12px;
+    border-left: 2px solid var(--border);
+    transition: all 0.3s ease;
+}
+
+.legal-toc nav a:hover {
+    color: var(--primary);
+    border-left-color: var(--primary);
+    background: rgba(14, 165, 233, 0.05);
+}
+
+.legal-toc nav a.active {
+    color: var(--primary);
+    border-left-color: var(--primary);
+    background: rgba(14, 165, 233, 0.1);
+    font-weight: 600;
+}
+
+/* Main Content */
+.legal-body {
+    max-width: 760px;
+}
+
+.legal-body section {
+    margin-bottom: 48px;
+    scroll-margin-top: 100px;
+}
+
+.legal-body h2 {
+    font-size: 28px;
+    font-weight: 800;
+    color: var(--text);
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid var(--border);
+}
+
+.legal-body h3 {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--text);
+    margin-top: 32px;
+    margin-bottom: 12px;
+}
+
+.legal-body p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: var(--text-light);
+    margin-bottom: 16px;
+}
+
+.legal-body ul {
+    margin: 16px 0;
+    padding-left: 24px;
+}
+
+.legal-body li {
+    font-size: 16px;
+    line-height: 1.8;
+    color: var(--text-light);
+    margin-bottom: 12px;
+}
+
+.legal-body li strong {
+    color: var(--text);
+}
+
+.legal-body a {
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.legal-body a:hover {
+    text-decoration: underline;
+}
+
+/* Contact Info Box */
+.contact-info {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 24px;
+    margin: 20px 0;
+}
+
+.contact-info p {
+    margin-bottom: 8px;
+}
+
+.contact-info p:last-child {
+    margin-bottom: 0;
+}
+
+/* Info Boxes */
+.info-box {
+    background: rgba(14, 165, 233, 0.05);
+    border: 1px solid rgba(14, 165, 233, 0.2);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin: 24px 0;
+}
+
+.info-box.warning {
+    background: rgba(245, 158, 11, 0.05);
+    border-color: rgba(245, 158, 11, 0.3);
+}
+
+.info-box p {
+    margin-bottom: 0;
+    color: var(--text);
+}
+
+/* Tables */
+.legal-body table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 24px 0;
+    font-size: 15px;
+}
+
+.legal-body th,
+.legal-body td {
+    padding: 12px 16px;
+    text-align: left;
+    border-bottom: 1px solid var(--border);
+}
+
+.legal-body th {
+    background: var(--bg-secondary);
+    font-weight: 600;
+    color: var(--text);
+}
+
+.legal-body td {
+    color: var(--text-light);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .legal-wrapper {
+        grid-template-columns: 200px 1fr;
+        gap: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .legal-hero {
+        padding: 140px 0 40px;
+    }
+
+    .legal-hero .hero-title {
+        font-size: 32px;
+    }
+
+    .legal-wrapper {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .legal-toc {
+        position: relative;
+        top: 0;
+        display: none;
+    }
+
+    .legal-content {
+        padding: 40px 0 60px;
+    }
+
+    .legal-body section {
+        margin-bottom: 36px;
+    }
+
+    .legal-body h2 {
+        font-size: 24px;
+    }
+
+    .legal-body h3 {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 640px) {
+    .legal-hero .hero-description {
+        font-size: 16px;
+    }
+
+    .legal-body p,
+    .legal-body li {
+        font-size: 15px;
+    }
+
+    .contact-info {
+        padding: 20px;
+    }
+}
+
+/* Navigation Link Styles */
+.nav-links a {
+    text-decoration: none;
+    color: var(--text);
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--primary);
+}
+
+/* Logo link */
+.logo {
+    text-decoration: none;
+    color: var(--text);
+}
+
+/* Footer Styles */
+.footer-col a {
+    display: block;
+    margin-bottom: 12px;
+}
