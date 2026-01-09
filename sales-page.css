@@ -630,6 +630,19 @@
 .logo {
     text-decoration: none;
     color: var(--text);
+    cursor: pointer;
+}
+
+.logo-image {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+}
+
+.footer .logo-image {
+    filter: brightness(0) invert(1);
+    width: 120px;
+    height: 120px;
 }
 
 /* Footer Styles */

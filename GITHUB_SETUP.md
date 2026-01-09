@@ -7,7 +7,7 @@
 1. Go to [github.com](https://github.com) and log in
 2. Click the **"+"** button in the top right → **"New repository"**
 3. Fill in the details:
-   - **Repository name**: `aliva-landing` (or your preferred name)
+   - **Repository name**: `aliva-landing-page` (or your preferred name)
    - **Description**: "Modern landing page for Aliva - AI-powered healthcare platform"
    - **Visibility**: Choose Public or Private
    - **DO NOT** initialize with README, .gitignore, or license (we already have these)
