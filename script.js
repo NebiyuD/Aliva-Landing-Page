@@ -51,6 +51,56 @@ const observer = new IntersectionObserver((entries) => {
 
 // Observe elements
 document.addEventListener('DOMContentLoaded', () => {
+    // Mobile menu toggle
+    const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+    const navLinks = document.getElementById('navLinks');
+
+    if (mobileMenuToggle && navLinks) {
+        // Create overlay
+        const overlay = document.createElement('div');
+        overlay.className = 'mobile-overlay';
+        document.body.appendChild(overlay);
+
+        mobileMenuToggle.addEventListener('click', () => {
+            mobileMenuToggle.classList.toggle('active');
+            navLinks.classList.toggle('active');
+            overlay.classList.toggle('active');
+            document.body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : '';
+        });
+
+        // Close menu when clicking overlay
+        overlay.addEventListener('click', () => {
+            mobileMenuToggle.classList.remove('active');
+            navLinks.classList.remove('active');
+            overlay.classList.remove('active');
+            document.body.style.overflow = '';
+        });
+
+        // Close menu when clicking a link
+        navLinks.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenuToggle.classList.remove('active');
+                navLinks.classList.remove('active');
+                overlay.classList.remove('active');
+                document.body.style.overflow = '';
+            });
+        });
+
+        // Handle dropdown on mobile
+        const dropdowns = navLinks.querySelectorAll('.nav-dropdown');
+        dropdowns.forEach(dropdown => {
+            const toggle = dropdown.querySelector('.nav-dropdown-toggle');
+            if (toggle) {
+                toggle.addEventListener('click', (e) => {
+                    if (window.innerWidth <= 768) {
+                        e.preventDefault();
+                        dropdown.classList.toggle('active');
+                    }
+                });
+            }
+        });
+    }
+
     // Observe stats
     document.querySelectorAll('.stat-item').forEach(stat => {
         observer.observe(stat);
@@ -94,13 +144,16 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
     
-    // Send button
-    document.querySelector('.send-btn').addEventListener('click', sendMessage);
-    demoInput.addEventListener('keypress', (e) => {
-        if (e.key === 'Enter') {
-            sendMessage();
-        }
-    });
+    // Send button (only on index page)
+    const sendBtn = document.querySelector('.send-btn');
+    if (sendBtn && demoInput) {
+        sendBtn.addEventListener('click', sendMessage);
+        demoInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                sendMessage();
+            }
+        });
+    }
     
     function sendMessage() {
         const message = demoInput.value.trim();
