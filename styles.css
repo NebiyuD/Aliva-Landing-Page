@@ -1264,35 +1264,45 @@ body {
 @media (max-width: 768px) {
     .mobile-menu-toggle {
         display: flex;
+        z-index: 1001;
     }
 
     .nav-links {
-        position: fixed;
-        top: 0;
-        right: -100%;
-        width: 80%;
-        max-width: 320px;
-        height: 100vh;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        max-height: 0;
         background: white;
         flex-direction: column;
-        align-items: flex-start;
-        padding: 80px 24px 24px;
-        gap: 8px;
-        box-shadow: -4px 0 20px rgba(0, 0, 0, 0.1);
-        transition: right 0.3s ease;
+        align-items: stretch;
+        padding: 0 20px;
+        gap: 0;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        transition: max-height 0.3s ease, padding 0.3s ease;
         z-index: 1000;
-        overflow-y: auto;
+        overflow: hidden;
+        border-radius: 0 0 16px 16px;
     }
 
     .nav-links.active {
-        right: 0;
+        max-height: 500px;
+        padding: 16px 20px;
     }
 
     .nav-link {
         width: 100%;
-        padding: 12px 0;
-        font-size: 18px;
+        padding: 14px 0;
+        font-size: 16px;
         border-bottom: 1px solid var(--border);
+        text-align: left;
+    }
+
+    .nav-link:last-of-type {
+        border-bottom: none;
     }
 
     .nav-dropdown {
@@ -1301,8 +1311,8 @@ body {
 
     .nav-dropdown-toggle {
         width: 100%;
-        padding: 12px 0;
-        font-size: 18px;
+        padding: 14px 0;
+        font-size: 16px;
         border-bottom: 1px solid var(--border);
     }
 
@@ -1314,7 +1324,7 @@ body {
         box-shadow: none;
         background: var(--bg-secondary);
         padding: 8px 16px;
-        margin-top: 8px;
+        margin: 8px 0;
         border-radius: 8px;
         display: none;
     }
@@ -1326,7 +1336,8 @@ body {
     .nav-links .btn-primary {
         width: 100%;
         text-align: center;
-        margin-top: 16px;
+        margin-top: 12px;
+        margin-bottom: 4px;
     }
 
     .hero-title {

@@ -56,24 +56,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const navLinks = document.getElementById('navLinks');
 
     if (mobileMenuToggle && navLinks) {
-        // Create overlay
-        const overlay = document.createElement('div');
-        overlay.className = 'mobile-overlay';
-        document.body.appendChild(overlay);
-
         mobileMenuToggle.addEventListener('click', () => {
             mobileMenuToggle.classList.toggle('active');
             navLinks.classList.toggle('active');
-            overlay.classList.toggle('active');
-            document.body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : '';
-        });
-
-        // Close menu when clicking overlay
-        overlay.addEventListener('click', () => {
-            mobileMenuToggle.classList.remove('active');
-            navLinks.classList.remove('active');
-            overlay.classList.remove('active');
-            document.body.style.overflow = '';
         });
 
         // Close menu when clicking a link
@@ -81,9 +66,15 @@ document.addEventListener('DOMContentLoaded', () => {
             link.addEventListener('click', () => {
                 mobileMenuToggle.classList.remove('active');
                 navLinks.classList.remove('active');
-                overlay.classList.remove('active');
-                document.body.style.overflow = '';
             });
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!navLinks.contains(e.target) && !mobileMenuToggle.contains(e.target)) {
+                mobileMenuToggle.classList.remove('active');
+                navLinks.classList.remove('active');
+            }
         });
 
         // Handle dropdown on mobile
