@@ -39,23 +39,23 @@ body {
 /* Navigation */
 .navbar {
     position: relative;
-    margin: 16px auto;
-    width: calc(100% - 80px);
-    max-width: 1400px;
+    margin: 12px auto;
+    width: calc(100% - 48px);
+    max-width: 1200px;
     z-index: 1000;
-    background: rgba(255, 255, 255, 0.92);
+    background: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(20px);
-    border-radius: 16px;
-    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
     transition: all 0.3s ease;
-    border: 1px solid rgba(0, 0, 0, 0.06);
+    border: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .nav-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 8px 32px;
+    padding: 6px 24px;
 }
 
 .logo {
@@ -70,8 +70,9 @@ body {
 }
 
 .logo-image {
-    width: 120px;
-    height: 120px;
+    width: 140px;
+    height: auto;
+    max-height: 52px;
     object-fit: contain;
 }
 
@@ -588,8 +589,9 @@ input:checked + .slider:before {
 
 .footer .logo-image {
     filter: brightness(0) invert(1);
-    width: 120px;
-    height: 120px;
+    width: 140px;
+    height: auto;
+    max-height: 52px;
 }
 
 .footer-links {
