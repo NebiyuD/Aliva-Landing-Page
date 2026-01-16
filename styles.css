@@ -20,6 +20,13 @@
     --border: #E2E8F0;
 }
 
+html, body {
+    overflow-x: hidden !important;
+    width: 100% !important;
+    max-width: 100vw !important;
+    position: relative;
+}
+
 html {
     scroll-behavior: smooth;
     touch-action: manipulation;
@@ -33,7 +40,6 @@ body {
     touch-action: manipulation;
     -webkit-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%;
-    overflow-x: hidden;
     overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
 }
@@ -356,6 +362,7 @@ body {
     align-items: center;
     padding: 140px 0 80px;
     position: relative;
+    overflow: hidden;
 }
 
 /* Hero glow effect */
