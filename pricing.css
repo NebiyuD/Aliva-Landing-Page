@@ -55,7 +55,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 6px 24px;
+    padding: 12px 28px;
 }
 
 .logo {
@@ -70,9 +70,8 @@ body {
 }
 
 .logo-image {
-    width: 140px;
-    height: auto;
-    max-height: 52px;
+    height: 48px;
+    width: auto;
     object-fit: contain;
 }
 
@@ -589,9 +588,8 @@ input:checked + .slider:before {
 
 .footer .logo-image {
     filter: brightness(0) invert(1);
-    width: 140px;
-    height: auto;
-    max-height: 52px;
+    height: 48px;
+    width: auto;
 }
 
 .footer-links {
