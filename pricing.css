@@ -70,7 +70,7 @@ body {
 }
 
 .logo-image {
-    height: 56px;
+    height: 40px;
     width: auto;
     object-fit: contain;
 }
@@ -588,7 +588,7 @@ input:checked + .slider:before {
 
 .footer .logo-image {
     filter: brightness(0) invert(1);
-    height: 56px;
+    height: 40px;
     width: auto;
 }
 
