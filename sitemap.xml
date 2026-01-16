@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://www.aliva.us/</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.aliva.us/pricing.html</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.aliva.us/demo.html</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.aliva.us/sales.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.aliva.us/support.html</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.aliva.us/privacy.html</loc>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://www.aliva.us/terms.html</loc>
+    <priority>0.3</priority>
+  </url>
+</urlset>
