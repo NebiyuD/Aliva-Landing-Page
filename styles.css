@@ -181,7 +181,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 6px 28px;
+    padding: 12px 32px;
 }
 
 .logo {
@@ -196,7 +196,7 @@ body {
 }
 
 .logo-image {
-    height: 40px;
+    height: 56px;
     width: auto;
     object-fit: contain;
 }
@@ -1153,7 +1153,7 @@ body {
 
 .footer .logo-image {
     filter: brightness(0) invert(1);
-    height: 40px;
+    height: 56px;
     width: auto;
 }
 
