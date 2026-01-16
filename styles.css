@@ -196,7 +196,7 @@ body {
 }
 
 .logo-image {
-    height: 56px;
+    height: 80px;
     width: auto;
     object-fit: contain;
 }
@@ -1153,7 +1153,7 @@ body {
 
 .footer .logo-image {
     filter: brightness(0) invert(1);
-    height: 56px;
+    height: 80px;
     width: auto;
 }
 
